@@ -9,7 +9,7 @@ I: Interface Segregation
 
 No code should be forced to depend on methods it does not use.
 
-This passes the principle because we have created the SMSAuthorizer 
+This passes the principle because we have created the SMSAuthorizer
 class. This can then be passed to any PaymentProcessor subclass that
 requires it. We did a Composition approach here. Another option would
 have been to create the PaymentProcessorSMS class and have the necessary
