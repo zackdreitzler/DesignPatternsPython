@@ -7,7 +7,7 @@ S: Single Responsibility
     I: Interface Segregation
     D: Dependency Inversion
 
-Here we have taken the pay() method out of Order and added it to 
+Here we have taken the pay() method out of Order and added it to
 the PaymentProcessor class. This ensures that each class has a single
 responsibility.
 
