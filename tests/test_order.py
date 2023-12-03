@@ -1,7 +1,7 @@
 """This module tests the functionality of the SOLID files"""
 import pytest
 
-from SOLID.single_responsibility_after import Order, PaymentProcessor
+from SOLID.single_responsibility_after import Order
 
 
 @pytest.fixture
@@ -18,13 +18,8 @@ def empty_order() -> Order:
     return Order()
 
 
-@pytest.fixture
-def payment_processor() -> PaymentProcessor:
-    return PaymentProcessor()
-
-
-class TestSingleResponsibilityOrder:
-    """Test the functionality of the Order class in the single responsibility file"""
+class TestOrder:
+    """Test the functionality of the Order class"""
 
     def test_adding_item_to_nonempty_order(self, valid_order):
         """Test adding an item to a nonempty order"""
@@ -55,19 +50,3 @@ class TestSingleResponsibilityOrder:
     def test_getting_total_price_with_empty_order(self, empty_order):
         """Test getting the total price of an empty order"""
         assert empty_order.total_price() == 0
-
-
-class TestPaymentProcessor:
-    """Test the functionality of the PaymentProcessor class"""
-
-    def test_pay_with_debit(self, valid_order, payment_processor):
-        """Test paying an order with a debit card"""
-        payment_processor.pay_debit(valid_order, "123456")
-
-        assert valid_order.status == "paid"
-
-    def test_pay_with_credit(self, valid_order, payment_processor):
-        """Test paying an order with a credit card"""
-        payment_processor.pay_credit(valid_order, "123456")
-
-        assert valid_order.status == "paid"
