@@ -23,8 +23,8 @@ def payment_processor() -> PaymentProcessor:
     return PaymentProcessor()
 
 
-class TestOrder:
-    """Test the functionality of the Order class"""
+class TestSingleResponsibilityOrder:
+    """Test the functionality of the Order class in the single responsibility file"""
 
     def test_adding_item_to_nonempty_order(self, valid_order):
         """Test adding an item to a nonempty order"""
