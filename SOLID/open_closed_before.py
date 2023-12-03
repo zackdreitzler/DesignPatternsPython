@@ -1,17 +1,17 @@
 """
-This file goes over the S in SOLID Design principles
+This file goes over the O in SOLID Design principles
 
-S: Single Responsibility
-    O: Open/Closed
+    S: Single Responsibility
+O: Open/Closed
     L: Liskov Substitution
     I: Interface Segregation
     D: Dependency Inversion
 
-A module should be responsible to one, and only one, actor.
+"software entities (classes, modules, functions, etc.)
+should be open for extension, but closed for modification"
 
-Here we have taken the pay() method out of Order and added it to
-the PaymentProcessor class. This ensures that each class has a single
-responsibility.
+Here we see that the PaymentProcessor class violates the open closed principle.
+We can see this because to add another payment type, the class would need changes.
 
 """
 from dataclasses import dataclass, field
