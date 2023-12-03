@@ -16,6 +16,7 @@ can be extended with subclasses.
 
 """
 from abc import ABC, abstractmethod
+
 from SOLID.order import Order
 
 
