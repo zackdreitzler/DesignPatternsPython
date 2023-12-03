@@ -7,6 +7,8 @@ S: Single Responsibility
     I: Interface Segregation
     D: Dependency Inversion
 
+A module should be responsible to one, and only one, actor.
+
 Below we can see that the Order class has 2 responsibilities.
 Managing the items within the order and paying for the items.
 
